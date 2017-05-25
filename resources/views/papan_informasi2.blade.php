@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-xs-12">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="panel panel-primary">
@@ -95,87 +95,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-12">
+            <div class="col-lg-8 col-xs-12">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="panel panel-warning">
-                            <div class="panel-heading">
-                                <h3 class="panel-title "> Atensi </h3></div>
-                            <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Kepada:</th>
-                                                <th>Perhatian</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Farouq</td>
-                                                <td>Menghadap Satuan Pengasuhan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Farouq</td>
-                                                <td>Menghadap Satuan Pengasuhan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Fatmil</td>
-                                                <td>Menghadap Satuan Pengasuhan</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Syafiq</td>
-                                                <td>Menghadap Satuan Pengasuhan</td>
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <div class="panel panel-warning">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Mahasiswa Sakit</h3></div>
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Nama</th>
-                                                <th>Sakit</th>
-                                                <th>Keterangan</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Panjul bin Usro</td>
-                                                <td>Mata Bintit</td>
-                                                <td>Sedang Menjalani Operasi Mata</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Barby binti Saodah</td>
-                                                <td>Galau Stadium 4</td>
-                                                <td>Kondisi Antara hidup dan mati</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Panjul bin Usro</td>
-                                                <td>Mata Bintit</td>
-                                                <td>Sedang Menjalani Operasi Mata</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Barby binti Saodah</td>
-                                                <td>Galau Stadium 4</td>
-                                                <td>Kondisi Antara hidup dan mati</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-12 col-xs-12">
                         <div class="panel panel-success">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Ijin Keluar</h3></div>
@@ -226,7 +148,46 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-lg-6 col-xs-12">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Mahasiswa Sakit</h3></div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Nama</th>
+                                                <th>Sakit</th>
+                                                <th>Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Panjul bin Usro</td>
+                                                <td>Mata Bintit</td>
+                                                <td>Sedang Menjalani Operasi Mata</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Barby binti Saodah</td>
+                                                <td>Galau Stadium 4</td>
+                                                <td>Kondisi Antara hidup dan mati</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Panjul bin Usro</td>
+                                                <td>Mata Bintit</td>
+                                                <td>Sedang Menjalani Operasi Mata</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Barby binti Saodah</td>
+                                                <td>Galau Stadium 4</td>
+                                                <td>Kondisi Antara hidup dan mati</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xs-12">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Pelanggaran </h3></div>

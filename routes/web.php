@@ -22,7 +22,7 @@ Route::get('/', function()
 
 Route::get('/pinfo', function()
 {
-	return View::make('papan_informasi');
+	return View::make('papan_informasi2');
 });
 
 Route::get('/charts', function()
