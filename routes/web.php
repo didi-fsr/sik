@@ -17,7 +17,12 @@
 
 Route::get('/', function()
 {
-	return View::make('home');
+	return View::make('pamong_home');
+});
+
+Route::get('/pinfo', function()
+{
+	return View::make('papan_informasi');
 });
 
 Route::get('/charts', function()

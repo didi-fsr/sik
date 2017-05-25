@@ -346,6 +346,6 @@
             </div>
             <!-- /#page-wrapper -->
         </div>
-    </div>
+ </div>
 @stop
 
