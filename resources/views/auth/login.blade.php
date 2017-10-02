@@ -1,63 +1,99 @@
-@extends('app')
+@extends ('layouts.plane')
 
-@section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
+{{-- @section('navbar')
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="app-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <!-- Authentication Links -->
+            @if (Auth::guest())
+                <li><a href="{{ route('login') }}">Login</a></li>
+                <li><a href="{{ route('register') }}">Register</a></li>
+            @else
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
 
-					<form class="form-horizontal" role="form" method="POST" action="/auth/login">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            @endif
+        </ul>
+      </div>
+    </div>
+  </nav>
+@endsection --}}
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
+@section ('content')
+<div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+            <br /><br /><br />
+               @section ('login_panel_title','Please Sign In')
+               @section ('login_panel_body')
+                 <div class="login-card"><img src="{{ asset("assets/img/logo stsn.png") }}" alt="logo_stsn" width="50" height="50" class="profile-img-card">
+                     <p class="profile-name-card">Sistem Informasi Kemahasiswaan STSN</p>
+                     <form class="form-signin" role="form" method="POST" action="{{ route('login') }}"><span class="reauth-email"> </span>
+                        {{ csrf_field() }}
+                        <div class="form-group {{ $errors->has('text') ? ' has-error' : '' }}" >
+                          <input class="form-control " type="text" name="name" required="" placeholder="Username" autofocus="" value="{{ old('username') }}" id="inputUsername">
+                          @if ($errors->has('text'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('text') }}</strong>
+                              </span>
+                          @endif
+                        </div>
 
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
+                        <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                          <input class="form-control" type="password" name="password" required="" placeholder="Password" id="inputPassword">
+                          @if ($errors->has('password'))
+                              <span class="help-block">
+                                  <strong>{{ $errors->first('password') }}</strong>
+                              </span>
+                          @endif
+                        </div>
 
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary" style="margin-right: 15px;">
-									Login
-								</button>
+                         <div class="checkbox">
+                             <div class="checkbox">
+                                 <label>
+                                     <input type="checkbox">Remember me</label>
+                             </div>
+                         </div>
+                         <button class="btn btn-primary btn-block btn-lg btn-signin" type="submit">Sign in</button>
+                     </form><a href=""{{ route('password.request') }}"" class="forgot-password">Forgot your password?</a></div>
+                        {{-- <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                    </label>
+                                </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                                <a href="{{ url ('') }}" class="btn btn-lg btn-success btn-block">Login</a>
+                            </fieldset>
+                        </form> --}}
 
-								<a href="/password/email">Forgot Your Password?</a>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-@endsection
+                @endsection
+                @include('widgets.panel', array('as'=>'login', 'header'=>true))
+            </div>
+        </div>
+    </div>
+@stop

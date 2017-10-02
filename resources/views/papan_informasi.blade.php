@@ -13,12 +13,12 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="page-header">
-                    <h1>Sistem Informasi Kemahasiswaan <br /> <small> Papan Informasi</small></h1></div>
+                    <h1>Papan Informasi <br /> <small>Sistem Informasi Kemahasiswaan STSN </small></h1></div>
             </div>
             <div class="col-lg-6">
                 <div class="media">
                     <div class="media-left">
-                        <a><img></a>
+                        <a><img src="{{asset("assets/img/mhs.jpg")}}" width="80"></a>
                     </div>
                     <div class="media-body">
                         <h4>Media Heading</h4>

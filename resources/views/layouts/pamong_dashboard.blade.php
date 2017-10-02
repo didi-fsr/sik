@@ -1,18 +1,18 @@
 @extends('layouts.plane')
 
-@section('body')
+@section('content')
     <div id="wrapper">
         <!-- Navigation -->
         <div class="page-header"></div>
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
-                <div class="navbar-header"><a class="navbar-brand navbar-link " href="#">SIK-STSN </a>
+                <div class="navbar-header"><a class="navbar-brand navbar-link " href="{{ url ('pamonghome') }}">SIK | Dashboard Pengasuh </a>
                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
                 </div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav navbar-left">
 
-                        <li class="active" role="presentation"><a href="#">Profil Mahasiswa</a></li>
+                        <li  role="presentation"><a href="#">Profil Mahasiswa</a></li>
                         <li  role="presentation"><a href="#">Infografis Mahasiswa</a></li>
                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">Input Data Mahasiswa<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
@@ -38,7 +38,7 @@
                             </ul>
                         </li>
                         <li class="dropdown" role="presentation">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i></a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-user fa-fw"></i>{{ Auth::user()->name }} <i class="fa fa-caret-down"></i></a>
                             <ul class="dropdown-menu dropdown-user">
                                 <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                                 </li>
@@ -60,5 +60,5 @@
     <div class="container-fluid">
         @yield('section')
     </div>
-@stop
 
+@stop
